@@ -37,7 +37,7 @@ async function tryFetchWeather(city: string) {
 function setCurrentLocation() {}
 onMounted(async () => {
   setCurrentLocation();
-  await tryFetchWeather("");
+  await tryFetchWeather("Tarnow");
 });
 </script>
 <template>

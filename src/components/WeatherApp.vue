@@ -34,7 +34,7 @@ async function fetchWeatherByCity(city: string) {
   try {
     const response = await fetch(
       `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${lastCity}/${oneDayBefore}/${oneDayAfter}?unitGroup=metric&lang=pl&key=${
-        import.meta.env.VITE_WEATHER_API_KEY2
+        import.meta.env.VITE_WEATHER_API_KEY
       }`
     );
     if (!response.ok) {
@@ -57,7 +57,7 @@ async function fetchWeatherByCoordinates(coordinates: Coordinates) {
       },${
         coordinates.longitude
       }/${oneDayBefore}/${oneDayAfter}?unitGroup=metric&lang=pl&key=${
-        import.meta.env.VITE_WEATHER_API_KEY2
+        import.meta.env.VITE_WEATHER_API_KEY
       }`
     );
     if (!response.ok) {

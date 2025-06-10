@@ -3,19 +3,18 @@ import {
   Card,
   CardContent,
   CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import type { Weather, Coordinates } from "@/models";
-import { onMounted, ref } from "vue";
-import WeatherTable from "./WeatherTable.vue";
-import TableSkeleton from "./TableSkeleton.vue";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import type { Coordinates, Weather } from "@/models";
 import { useDebounceFn } from "@vueuse/core";
-import Button from "./ui/button/Button.vue";
 import { RefreshCw } from "lucide-vue-next";
+import { onMounted, ref } from "vue";
+import TableSkeleton from "./TableSkeleton.vue";
+import Button from "./ui/button/Button.vue";
+import WeatherTable from "./WeatherTable.vue";
 const weather = ref<Weather>();
 const currentCoordinates = ref<Coordinates>();
 const lastCity = ref<string>("");
